@@ -28,7 +28,16 @@ module.exports = [
     handle: 'payload',
     options: {
       keepExtensions: true,
-      limit: '5mb'
+      extendTypes:{
+        json: ['application/x-javascript'], // will parse application/x-javascript type body in the same way as JSON type
+        form: ['application/thinkjs-form'], // will parse application/thinkjs-form type body in the same way as form type
+        text: ['application/thinkjs-text'], // will parse application/thinkjs-text type body in the same way as text type
+        multipart: ['application/thinkjs-multipart'], // will parse application/thinkjs-multipart type body in the same way as multipart-form type
+        xml: ['application/thinkjs-xml'], // will parse application/thinkjs-xml type body in the same way as xml type
+      },
+      limit: '5mb',
+      uploadDir: path.join(path.join(path.join(think.ROOT_PATH, 'www'), 'static'), 'upload'),
+      hash: 'sha1'
     }
   },
   {

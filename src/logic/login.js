@@ -11,7 +11,7 @@ module.exports = class extends think.Logic {
         required: true,
         trim: true,
         method: 'POST',
-        length: {min: 6, max: 20}
+        length: {min: 4, max: 20}
       },
       password: {
         string: true,
@@ -47,7 +47,7 @@ module.exports = class extends think.Logic {
         required: true,
         trim: true,
         method: 'POST',
-        length: {min: 6, max: 20}
+        length: {min: 4, max: 20}
       },
       password: {
         string: true,
