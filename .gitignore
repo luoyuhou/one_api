@@ -4,3 +4,5 @@ node_modules
 runtime
 
 src/config/adapter.js
+package-lock.json
+www/static/upload
