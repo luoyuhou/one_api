@@ -1,0 +1,6 @@
+.idea
+
+node_modules
+runtime
+
+src/config/adapter.js

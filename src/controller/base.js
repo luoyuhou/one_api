@@ -13,6 +13,7 @@ module.exports = class extends think.Controller {
   }
 
   __after() {
+    console.log('base', JSON.stringify(this.ctx.state.data))
     return this.json(this.ctx.state.data);
   }
 };
