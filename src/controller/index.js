@@ -1,4 +1,5 @@
 const Api = require('./api');
+const Errcode = require('../consts/errcode');
 
 module.exports = class extends Api {
   async indexAction() {
@@ -16,14 +17,5 @@ module.exports = class extends Api {
       v.type = arr;
     })
     this.ctx.state.data.data = res;
-  }
-
-  async listAction() {
-    let id = this.get('id');
-    console.log('id', id);
-    let res = await this.model('course_list').where({pid: 0, course_id: id}).field('id,title,sort,preview,url,createtime').select();
-    if (!think.isEmpty(res)) {
-      this.ctx.state.data.data = res;
-    }
   }
 }

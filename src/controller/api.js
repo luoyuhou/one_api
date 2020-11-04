@@ -7,7 +7,7 @@ module.exports = class extends Base {
     super.__before();
     let user = await this.session(User);
     if (think.isEmpty(user)) {
-      return this.json(Errcode.NOT_LOGIN);
+      // return this.json(Errcode.NOT_LOGIN);
     }
     this.ctx.user = user;
   }
